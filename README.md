@@ -31,7 +31,7 @@ For the backbone of our object detection model, RegNetX-400MF model was used. Re
 ## FCOS: Anchor-Free Object Detection
 FCOS (Fully convolutional one-stage) is an achor-free object detection technique. Unlike traditional anchor-based methods, FCOS is anchor-free, making it simpler and more effective. It assigns bounding boxes to objects by regressing from object centers to box corners. The below image (borrowed from the original paper) illustartes the FCOS approach.
 
-![FCOS Model Architecture](https://github.com/sethilakshay/Look-Once-Detect-All/blob/main/FCOS_Methadology.png)
+![FCOS Model Architecture](FCOS_Methadology.png)
 
 **Note: The original FCOS model uses shared stem for centerness and classification. Recent follow-up papers commonly place centerness and box regression predictors with a shared stem, which we follow here. **
 
@@ -39,4 +39,4 @@ FCOS (Fully convolutional one-stage) is an achor-free object detection technique
 ## Evaluation
 The trained model was evaluated on mAP (mean Average Precision) and its losses (centre loss, box loss and class loss). The below image shows model detecting images.
 
-![FCOS Model detecting Images](https://github.com/sethilakshay/Look-Once-Detect-All/blob/main/ImageDetection.png)
+![FCOS Model detecting Images](ImageDetection.png)
