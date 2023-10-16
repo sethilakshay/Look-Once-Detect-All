@@ -21,22 +21,21 @@ To understand the feature space of the Linear probed ResNet-18 model and how it 
 ## Image Detection
 Object detection is a critical computer vision task, with numerous applications such as autonomous driving, surveillance, and content-based image retrieval. This project implements the research paper **[FCOS: A simple and strong anchor-free object detector](https://arxiv.org/abs/2006.09214)**. FCOS (Fully convolutional one-stage) technique is an anchor-free methodology that simplifies the detection process greatly increasing the speed of detection while maintaining high accuracy. I used pre-trained RegNetX-400MF model as the backbone for implementing the detection network.
 
-## Task and Dataset
+### Task and Dataset
 The primary task of this project is object detection, which involves identifying and localizing objects within an image, drawing bounding boxes around them. [PASCAL VOC 2007](http://host.robots.ox.ac.uk/pascal/VOC/) dataset which is a widely-used benchmark for object detection is used. This dataset comprises a diverse set of images with objects belonging to several predefined categories. The goal is to detect these objects, predict their class labels, and provide precise bounding box coordinates.
 
-## Model Architecture
+### Model Architecture
 Backbone: RegNetX-400MF
 For the backbone of our object detection model, RegNetX-400MF model was used. RegNets are a class of efficient and powerful models specifically designed for computer vision tasks. The "400MF" variant of RegNetX signifies its depth and capacity, making it well-suited for object detection.
 
-## FCOS: Anchor-Free Object Detection
+### FCOS: Anchor-Free Object Detection
 FCOS (Fully convolutional one-stage) is an achor-free object detection technique. Unlike traditional anchor-based methods, FCOS is anchor-free, making it simpler and more effective. It assigns bounding boxes to objects by regressing from object centers to box corners. The below image (borrowed from the original paper) illustartes the FCOS approach.
 
 ![FCOS Model Architecture](FCOS_Methadology.png)
 
 **Note: The original FCOS model uses shared stem for centerness and classification. Recent follow-up papers commonly place centerness and box regression predictors with a shared stem, which we follow here. **
 
-
-## Evaluation
+### Evaluation
 The trained model was evaluated on mAP (mean Average Precision) and its losses (centre loss, box loss and class loss). The below image shows model detecting images.
 
 ![FCOS Model detecting Images](ImageDetection.png)
