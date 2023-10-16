@@ -33,7 +33,7 @@ FCOS (Fully convolutional one-stage) is an achor-free object detection technique
 
 ![FCOS Model Architecture](FCOS_Methadology.png)
 
-**Note: The original FCOS model uses shared stem for centerness and classification. Recent follow-up papers commonly place centerness and box regression predictors with a shared stem, which we follow here. **
+**Note: The original FCOS model uses shared stem for centerness and classification. Recent follow-up papers commonly place centerness and box regression predictors with a shared stem, which we follow here.**
 
 ### Evaluation
 The trained model was evaluated on mAP (mean Average Precision) and its losses (centre loss, box loss and class loss). The below image shows model detecting images.
